@@ -1,0 +1,135 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+#main-container {
+    max-width: 400px; /* Ensure a consistent width for both tools */
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    
+}
+
+.tool-section {
+    display: none; /* Hide sections by default */
+    
+}
+
+#calculator-section {
+    display: block; /* Show calculator by default */
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0; /* Space between tools */
+}
+
+.calculator-display {
+    background-color: black;
+    color: beige;
+    width: 100%;
+    text-align: right;
+    padding: 20px;
+    font-size: 2em;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal-width columns */
+    gap: 5px; /* Reduced space between buttons */
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Styling buttons */
+button {
+    border: 1px solid #ccc;
+    padding: 20px; /* Adjusted padding for consistent button size */
+    background-color: #f7f7f7;
+    font-size: 25px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Specific button styles */
+.func_keys {
+    background-color: #e8e6e3;
+}
+
+.operators {
+    background-color: #fe9241;
+    color: #fff;
+}
+
+#equal {
+    background-color: #0a89ff;
+    color: white;
+    grid-column: span 4; /* Makes the equal button take the full width of the row */
+  
+}
+
+/* Larger zero button */
+.zero {
+    grid-column: span 2; /* Span two columns for the zero button */
+}
+
+/* Adjusting the layout for the calculator keys */
+.calculator-keys > button {
+    flex: 1;
+    min-width: 70px;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Currency Converter Styles */
+.converter-container {
+    margin-top: 20px; /* Space above currency converter */
+}
+
+.input-section, .select-section {
+    margin-bottom: 10px; /* Space between input and dropdowns */
+   
+}
+
+#amount {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ccc;
+}
+
+#result {
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #0a89ff;
+}
+#convert{
+    background-color: #0a89ff;
+}
+
+
+
